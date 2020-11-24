@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <!-- ***hero*** -->
+    <div class="hero">
       <nav class="main-nav">
-        <i class="fas fa-bars mobile-nav-toggle" id="mobile-nav-toggle"></i>
+        <i class="fal fa-bars mobile-nav-toggle" id="mobile-nav-open"></i>
         <svg
           class="logo"
           width="62"
@@ -34,69 +35,50 @@
             fill-rule="nonzero"
           />
         </svg>
-        <ul class="nav-links">
-          <li class="nav-link"><a href="#">home</a></li>
-          <li class="nav-link"><a href="#">shop</a></li>
-          <li class="nav-link"><a href="#">about</a></li>
-          <li class="nav-link"><a href="#">contact</a></li>
-        </ul>
+        <div class="nav-links-wrapper">
+          <div class="nav-links-container">
+            <i class="fal fa-times mobile-nav-toggle" id="mobile-nav-close"></i>
+            <ul class="nav-links">
+              <li class="nav-link"><a href="#">home</a></li>
+              <li class="nav-link"><a href="#">shop</a></li>
+              <li class="nav-link"><a href="#">about</a></li>
+              <li class="nav-link"><a href="#">contact</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <div class="hero">
-        <div class="hero-img-container">
-          <img
-            src="./images/mobile-image-hero-1.jpg"
-            alt="Furniture"
-            class="hero-img"
-          />
-        </div>
-        <div class="arrow-container">
-          <i class="fal fa-chevron-left"></i>
-          <i class="fal fa-chevron-right"></i>
-        </div>
-        <div class="hero-txt">
-          <h2 class="main-heading">Discover innovative ways to decorate</h2>
-          <p class="info hero-info">
-            We provide unmatched quality, comfort, and style for property owners
-            across the country. Our experts combine form and function in
-            bringing your vision to life. Create a room in your own style with
-            our collection and make your property a reflection of you and what
-            you love.
-          </p>
-          <a href="#" class="shop-now"
-            >SHOP NOW <i class="fal fa-long-arrow-right"></i
-          ></a>
-        </div>
-      </div>
-    </header>
-
-    <!-- *****about our furniture***** -->
-    <div class="about">
-      <div class="about-img-container">
-        <img
-          src="./images/image-about-dark.jpg"
-          alt="Furniture in a room"
-          class="about-img about-img-dark"
-        />
-      </div>
-      <div class="about-txt">
-        <h3 class="about-heading">about our furniture</h3>
-        <p class="about-info info">
-          Our multinational collection blends design and function to suit your
-          individual taste. Make each room unique, or pick a cohesive theme that
-          best express your interests and what inspires you. Find the furniture
-          pieces you need, from traditional to contemporary styles or anything
-          in between. Product specialists are available to help you create your
-          dream space.
-        </p>
-      </div>
-      <div class="about-img-container">
-        <img
-          src="./images/image-about-light.jpg"
-          alt="Furniture in a room"
-          class="about-img about-img-light"
-        />
+      <div class="controls">
+        <i class="fal fa-chevron-left"></i><i class="fal fa-chevron-right"></i>
       </div>
     </div>
+
+    <div class="discover">
+      <h2 class="main-heading">Discover innovative ways to decorate</h2>
+      <p class="info discover-info">
+        We provide unmatched quality, comfort, and style for property owners
+        across the country. Our experts combine form and function in bringing
+        your vision to life. Create a room in your own style with our collection
+        and make your property a reflection of you and what you love.
+      </p>
+      <a href="#" class="shop-now"
+        >SHOP NOW <i class="fal fa-long-arrow-right"></i
+      ></a>
+    </div>
+
+    <!-- *****about our furniture***** -->
+    <div class="about-img-container about-dark"></div>
+    <div class="about-txt">
+      <h3 class="about-heading">about our furniture</h3>
+      <p class="about-info info">
+        Our multinational collection blends design and function to suit your
+        individual taste. Make each room unique, or pick a cohesive theme that
+        best express your interests and what inspires you. Find the furniture
+        pieces you need, from traditional to contemporary styles or anything in
+        between. Product specialists are available to help you create your dream
+        space.
+      </p>
+    </div>
+    <div class="about-img-container about-light"></div>
     <!-- ***scripts*** -->
     <script src="script.js"></script>
   </body>

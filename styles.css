@@ -24,14 +24,176 @@ body {
   font-size: 12px;
   min-width: 100vw;
   min-height: 100vh;
+  position: relative;
 }
 
-img {
-  max-width: 100%;
+.hero,
+.discover,
+.about-txt,
+.nav-links-container {
+  padding: 0 6%;
 }
 
-a:link,
-a:visited {
+div.hero,
+div.about-dark,
+div.about-light {
+  background-size: 100% 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+.main-heading,
+.about-heading,
+a.shop-now {
+  color: var(--black);
+}
+
+.mobile-nav-toggle {
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.main-heading,
+.about-heading {
+  padding-bottom: 1rem;
+}
+
+.discover-info,
+.about-info {
+  line-height: 1.4;
+}
+
+/* *****hero***** */
+.hero {
+  background: url("./images/mobile-image-hero-1.jpg");
+  padding-bottom: 96%;
+  width: 100%;
+  position: relative;
+}
+
+nav.main-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: block;
+  margin-left: 40%;
+}
+
+.nav-links-wrapper {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.nav-links-container,
+ul.nav-links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links-container {
+  background-color: var(--white);
+}
+
+.nav-links-container .mobile-nav-toggle {
   color: var(--dark-gray);
+}
+
+ul.nav-links {
+  list-style-type: none;
+  padding: 2rem 0;
+}
+
+ul.nav-links li {
+  margin-right: 1.5rem;
+}
+
+ul.nav-links li:last-child {
+  margin-right: 0;
+}
+
+ul.nav-links li a {
+  color: var(--black);
+  font-weight: 700;
   text-decoration: none;
+}
+
+.controls {
+  background-color: var(--black);
+  width: max-content;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.controls i {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.controls i:hover {
+  background-color: hsl(0, 0%, 16%);
+  color: var(--white);
+}
+
+/* *****discover***** */
+.discover {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.main-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.discover-info {
+  padding-bottom: 2.5rem;
+}
+
+.shop-now {
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 8px;
+}
+
+/* *****about our furniture***** */
+.about-dark {
+  background: url("./images/image-about-dark.jpg");
+  padding-bottom: 63.33%;
+}
+
+.about-txt {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.about-light {
+  background: url("./images/image-about-light.jpg");
+  padding-bottom: 60.454546%;
 }

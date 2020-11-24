@@ -64,6 +64,15 @@ a.shop-now {
   line-height: 1.4;
 }
 
+.hidden {
+  display: none;
+}
+
+.scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
 /* *****hero***** */
 .hero {
   background: url("./images/mobile-image-hero-1.jpg");
@@ -85,7 +94,6 @@ nav.main-nav {
 }
 
 .logo {
-  display: block;
   margin-left: 40%;
 }
 
@@ -96,7 +104,6 @@ nav.main-nav {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
 }
 
 .nav-links-container,

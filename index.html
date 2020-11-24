@@ -35,14 +35,27 @@
             fill-rule="nonzero"
           />
         </svg>
-        <div class="nav-links-wrapper">
+        <div class="nav-links-wrapper hidden" id="mobile-nav">
           <div class="nav-links-container">
             <i class="fal fa-times mobile-nav-toggle" id="mobile-nav-close"></i>
             <ul class="nav-links">
-              <li class="nav-link"><a href="#">home</a></li>
-              <li class="nav-link"><a href="#">shop</a></li>
-              <li class="nav-link"><a href="#">about</a></li>
-              <li class="nav-link"><a href="#">contact</a></li>
+              <li class="nav-link">
+                <a href="#" class="nav-link-anchor" id="nav-link-1">home</a>
+              </li>
+              <li class="nav-link">
+                <a href="#" class="nav-link-anchor" id="nav-link-2">shop</a>
+              </li>
+              <li class="nav-link">
+                <a
+                  href="#about-txt"
+                  class="nav-link-anchor about-anchor"
+                  id="nav-link-3"
+                  >about</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="#" class="nav-link-anchor" id="nav-link-4">contact</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -67,7 +80,7 @@
 
     <!-- *****about our furniture***** -->
     <div class="about-img-container about-dark"></div>
-    <div class="about-txt">
+    <div class="about-txt" id="about-txt">
       <h3 class="about-heading">about our furniture</h3>
       <p class="about-info info">
         Our multinational collection blends design and function to suit your

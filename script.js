@@ -58,6 +58,26 @@ function displayInfo(n) {
   detailsInfo.innerHTML = dataObjects[n].info;
 }
 
+function previous() {
+  infoIndex--;
+
+  if (infoIndex < 0) {
+    infoIndex = dataObjects.length - 1;
+  }
+
+  displayInfo(infoIndex);
+}
+
+function next() {
+  infoIndex++;
+
+  if (infoIndex > dataObjects.length - 1) {
+    infoIndex = 0;
+  }
+
+  displayInfo(infoIndex);
+}
+
 function showMobileNav() {
   mobileNav.classList.remove("hidden");
   bodyEl.classList.add("scroll");
@@ -114,22 +134,17 @@ mobileNavContainer.addEventListener("click", (e) => {
 });
 
 // controls
-btnPrev.addEventListener("click", () => {
-  infoIndex--;
+btnPrev.addEventListener("click", previous);
 
-  if (infoIndex < 0) {
-    infoIndex = dataObjects.length - 1;
+btnNext.addEventListener("click", next);
+
+document.addEventListener("keyup", (e) => {
+  console.log(e.code);
+  if (e.code === "ArrowLeft") {
+    previous();
   }
 
-  displayInfo(infoIndex);
-});
-
-btnNext.addEventListener("click", () => {
-  infoIndex++;
-
-  if (infoIndex > dataObjects.length - 1) {
-    infoIndex = 0;
+  if (e.code === "ArrowRight") {
+    next();
   }
-
-  displayInfo(infoIndex);
 });

@@ -23,12 +23,14 @@ body {
   font-family: var(--font-family);
   font-size: 12px;
   min-width: 100vw;
+  max-width: 1980px;
   min-height: 100vh;
+  overflow-x: hidden;
   position: relative;
 }
 
 .hero,
-.discover,
+.details,
 .about-txt,
 .nav-links-container {
   padding: 0 6%;
@@ -59,7 +61,7 @@ a.shop-now {
   padding-bottom: 1rem;
 }
 
-.discover-info,
+.details-info,
 .about-info {
   line-height: 1.4;
 }
@@ -75,7 +77,6 @@ a.shop-now {
 
 /* *****hero***** */
 .hero {
-  background: url("./images/mobile-image-hero-1.jpg");
   padding-bottom: 96%;
   width: 100%;
   position: relative;
@@ -161,8 +162,8 @@ ul.nav-links li a {
   color: var(--white);
 }
 
-/* *****discover***** */
-.discover {
+/* *****details***** */
+.details {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -172,7 +173,7 @@ ul.nav-links li a {
   font-weight: 600;
 }
 
-.discover-info {
+.details-info {
   padding-bottom: 2.5rem;
 }
 
@@ -184,7 +185,7 @@ ul.nav-links li a {
 
 /* *****about our furniture***** */
 .about-dark {
-  background: url("./images/image-about-dark.jpg");
+  background-image: url("./images/image-about-dark.jpg");
   padding-bottom: 63.33%;
 }
 
@@ -201,6 +202,162 @@ ul.nav-links li a {
 }
 
 .about-light {
-  background: url("./images/image-about-light.jpg");
+  background-image: url("./images/image-about-light.jpg");
   padding-bottom: 60.454546%;
+}
+
+/* segment *****media queries***** */
+@media screen and (min-width: 430px) {
+  .hero {
+    padding-bottom: 63.57%;
+  }
+
+  .controls i {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  /* *****general styles***** */
+  body {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(14, 1fr);
+    /*gap: 0;*/
+    min-width: 100vw;
+    /*min-height: 100vh;*/
+    height: 100vh;
+  }
+
+  .hero,
+  .details,
+  .about-txt,
+  .nav-links-container {
+    padding: 0 6%;
+  }
+
+  .hero,
+  .about-dark,
+  .about-light {
+    padding-bottom: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  /* *****hero***** */
+  .hero {
+    background-image: url("./images/desktop-image-hero-1.jpg");
+    grid-area: 1 / 1 / 3 / 9;
+  }
+
+  .details {
+    grid-area: 1 / 9 / 3 / 15;
+  }
+
+  .about-dark {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+
+  .about-txt {
+    grid-area: 3 / 5 / 4 / 11;
+  }
+
+  .about-light {
+    grid-area: 3 / 11 / 4 / 15;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .nav-links-wrapper {
+    background-color: transparent;
+    width: max-content;
+    height: max-content;
+    position: static;
+    top: unset;
+    left: unset;
+    display: block;
+    margin-left: 5%;
+  }
+
+  .nav-links-container {
+    background-color: transparent;
+  }
+
+  ul.nav-links li {
+    margin-right: 2rem;
+  }
+
+  ul.nav-links li a {
+    color: var(--white);
+    font-size: 0.8rem;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  ul.nav-links li a::after {
+    content: "";
+    height: 2px;
+    background-color: var(--white);
+    width: 60%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ul.nav-links li a:hover::after {
+    visibility: visible;
+  }
+
+  .controls {
+    left: 100%;
+  }
+
+  /* *****details***** */
+  .details {
+    padding: 6rem 15% 0;
+  }
+
+  .main-heading {
+    font-size: 1.8rem;
+  }
+
+  .shop-now {
+    transition: all 0.3s;
+  }
+
+  .shop-now:hover {
+    color: var(--dark-gray);
+  }
+
+  /* *****about our furniture***** */
+  .about-txt {
+    padding: 4rem 10%;
+  }
+
+  .about-heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 1430px) {
+  .details {
+    padding-top: 8rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+  }
 }
